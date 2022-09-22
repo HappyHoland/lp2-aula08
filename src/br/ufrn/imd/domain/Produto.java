@@ -3,14 +3,20 @@ package br.ufrn.imd.domain;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Super Classe para produtos do depósito
+ * @author felipe.holanda.119
+ *
+ */
 public class Produto {
 	
-	private String nome;
+	private String nome; 
 	private double preco;
 	private String marca;
 	private String descricao;
 	private LocalDate dataFabricacao;
 	
+	//Construtores
 	public Produto() {}
 	
 	public Produto(String nome, double preco, String marca, String descricao, LocalDate dataFabricacao) {
@@ -21,7 +27,8 @@ public class Produto {
 		this.descricao = descricao;
 		this.dataFabricacao = dataFabricacao;
 	}
-
+	
+	//Getters e Setters
 	public String getNome() {
 		return nome;
 	}
@@ -53,11 +60,14 @@ public class Produto {
 		this.dataFabricacao = dataFabricacao;
 	}
 	
+	
+	//toString
 	@Override
 	public String toString() {
 		return "Nome: " + nome + " - Marca: " + marca + " - Preço: " + preco + " - Descrição: " + descricao + " - Data de Fabricação: " + dataFabricacao;
 	}
 
+	//equals e hashCode
 	@Override
 	public int hashCode() {
 		return Objects.hash(nome);

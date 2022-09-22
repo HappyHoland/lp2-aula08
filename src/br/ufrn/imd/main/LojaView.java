@@ -32,6 +32,7 @@ public class LojaView {
 		
 		try {
 			
+			//loop para rodar o programa
 			while (!end) {
 				
 				do {
